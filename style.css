@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +30,10 @@ html {
 
 body {
   animation: opening 1s ease-in-out;
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 h1 {
   font-size: var(--h1);
@@ -72,6 +77,7 @@ a {
 .main-head {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  z-index: 2;
 }
 
 .main-head nav {
@@ -89,6 +95,7 @@ a {
   font-family: "Rubik Scribble", system-ui;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .nav-links {
@@ -123,6 +130,7 @@ a {
   font-family: "Rubik Scribble", system-ui;
   font-weight: 400;
   font-style: normal;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   /* box-shadow: 2px; */
 }
 
@@ -151,6 +159,7 @@ a {
   left: -20%;
   z-index: -1;
   animation: plant-entrance 1.5s ease-in-out forwards;
+  max-height: 80%;
 }
 
 .plant2 {
@@ -176,5 +185,15 @@ a {
 
   to {
     transform: translateY(0%);
+  }
+}
+
+@media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+
+  .nav-links {
+    padding-top: 1.5rem;
   }
 }

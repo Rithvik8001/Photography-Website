@@ -27,10 +27,6 @@ html {
   --greyText: #525252;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
 h1 {
   font-size: var(--h1);
   font-family: "PT Serif", serif;
@@ -72,6 +68,7 @@ a {
 
 .main-head {
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .main-head nav {
@@ -106,12 +103,13 @@ a {
   flex-wrap: wrap;
   width: 95%;
   margin: 0 0 0 auto;
+  overflow: hidden;
 }
 
 .hero-intro {
+  flex: 2 1 40rem;
   text-align: center;
   /* doing this to cotain img within 90vh and avoid scrolling */
-  flex: 2 1 40rem;
 }
 
 .hero-intro p {
@@ -122,6 +120,7 @@ a {
   font-family: "Rubik Scribble", system-ui;
   font-weight: 400;
   font-style: normal;
+  /* box-shadow: 2px; */
 }
 
 .hero-intro a {
@@ -129,9 +128,27 @@ a {
   border: 0.3rem solid black;
   margin-bottom: 3rem;
 }
-.hero-main-img {
+
+.hero-image {
+  background: linear-gradient(#dad8dd, #dad1d4);
   flex: 1 1 40rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-main-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.plant {
+  position: absolute;
+  bottom: 0;
+  left: -20%;
+  z-index: -1;
+}
+
+.plant2 {
+  left: 40%;
 }
